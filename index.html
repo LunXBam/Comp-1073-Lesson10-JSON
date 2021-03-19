@@ -7,19 +7,18 @@
 	<link href="css/normalize.css" rel="stylesheet" />
 	<link href="css/styles.css" rel="stylesheet" />
 </head>
-
 <body>
 	<!-- STEP 1: Build out a HEADER and a SECTION element -->
 	<header>
 
 	</header>
 	<section>
-		
+
 	</section>
 	<script>
 		/* STEP 2: Bind the HEADER and the SECTION elements above to variables */
-		const header = document.querySelector('header');
-		const section = document.querySelector('section');
+		const header = document.querySelector("header");
+		const section = document.querySelector("section");
 		/* STEP 3: Store the URL of a JSON file in a variable */
 		let requestURL = "https://smccrindle.github.io/comp1073module10/js/i-scream.json";
 		console.log(requestURL);
@@ -32,30 +31,31 @@
 		/* STEP 7: Send the request with the send() method */
 		request.send();
 		/* STEP 8: Add an event handler that listens for the onload event of the JSON file/object */
-		request.onload = function(){
+		request.onload = function() {
 			let iScreamInc = request.response;
 			console.log(iScreamInc);
 			populateHeader(iScreamInc);
+			showTopFlavors(iScreamInc);
 		}
 		/* STEP 9: Build out the populateHeader() function */
-		function populateHeader(jsonObj){
+		function populateHeader(jsonObj) {
 			let headerH1 = document.createElement("h1");
-			headerH1.textContent = jsonObj.companyName;
+			headerH1.textContent = jsonObj["companyName"];
 			header.appendChild(headerH1);
 		}
 		/* STEP 10a: Assemble the showTopFlavors() function */
-		function showTopFlavors(jsonObj){
+		function showTopFlavors(jsonObj) {
 			// STEP 10b: Bind the JSON topFlavors object to a var
 			let topFlavors = jsonObj["topFlavors"];
 			// STEP 10c: Loop through the topFlavors object
-			for(let i = 0; i < topFlavors.length; i++){
+			for (let i = 0; i < topFlavors.length; i ++) {
 				// STEP 10d: build HTML elements for the content
-				let article = document.createElement('article');
-				let h2 = document.createElement('h2');
-				let image = document.createElement('img');
-				let p1 = document.createElement('p');
-				let p2 = document.createElement('p');
-				let list = document.createElement('ul');
+				let article = document.createElement("article");
+				let h2 = document.createElement("h2");
+				let image = document.createElement("img");
+				let p1 = document.createElement("p");
+				let p2 = document.createElement("p");
+				let list = document.createElement("ul");
 				// STEP 10e: Set the textContent property for each of the above elements (except the UL), based on the JSON content
 				h2.textContent = topFlavors[i]["name"];
 				image.setAttribute("src", "images/" + topFlavors[i]["image"]);
@@ -63,7 +63,7 @@
 				p2.textContent = "calories: " + topFlavors[i]["calories"];
 				// STEP 10f: Build a loop for the ingredients array in the JSON
 				let ingredients = topFlavors[i]["ingredients"];
-				for(let j = 0; j < ingredients.length; j++){
+				for (let j = 0; j < ingredients.length; j ++) {
 					let listItem = document.createElement("li");
 					listItem.textContent = ingredients[j];
 					// add the ingredient to the UL
