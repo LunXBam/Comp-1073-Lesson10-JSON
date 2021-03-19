@@ -7,19 +7,18 @@
 	<link href="css/normalize.css" rel="stylesheet" />
 	<link href="css/styles.css" rel="stylesheet" />
 </head>
-
 <body>
 	<!-- STEP 1: Build out a HEADER and a SECTION element -->
 	<header>
 
 	</header>
 	<section>
-		
+
 	</section>
 	<script>
 		/* STEP 2: Bind the HEADER and the SECTION elements above to variables */
-		const header = document.querySelector('header');
-		const section = document.querySelector('section');
+		const header = document.querySelector("header");
+		const section = document.querySelector("section");
 		/* STEP 3: Store the URL of a JSON file in a variable */
 		let requestURL = "https://smccrindle.github.io/comp1073module10/js/i-scream.json";
 		console.log(requestURL);
@@ -28,19 +27,19 @@
 		/* STEP 5: Open a new request using the request() method */
 		request.open("GET", requestURL);
 		/* STEP 6: Set JavaScript to accept JSON from the server */
-		request.responesType = "json";
+		request.responseType = "json";
 		/* STEP 7: Send the request with the send() method */
 		request.send();
 		/* STEP 8: Add an event handler that listens for the onload event of the JSON file/object */
-		request.onload = function(){
+		request.onload = function() {
 			let iScreamInc = request.response;
 			console.log(iScreamInc);
 			populateHeader(iScreamInc);
 		}
 		/* STEP 9: Build out the populateHeader() function */
-		function populateHeader(jsonObj){
+		function populateHeader(jsonObj) {
 			let headerH1 = document.createElement("h1");
-			headerH1.textContent = jsonObj.companyName;
+			headerH1.textContent = jsonObj["companyName"];
 			header.appendChild(headerH1);
 		}
 		/* STEP 10a: Assemble the showTopFlavors() function */
@@ -69,3 +68,4 @@
 		</script>
 	</body>
 </html>
+© 2021 GitHub, Inc.
