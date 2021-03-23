@@ -39,7 +39,7 @@
     },
     {
       "name" : "Bizzare Banna Berries",
-      "calories" : 400,
+      "calories" : 325,
       "type" : "sorbet",
       "ingredients" : [
         "banana",
@@ -51,13 +51,13 @@
     "image" : "ice-cream-xtra1.svg"
     },
     {
-      "name" : "What Not Icecream?",
+      "name" : "Coconut Delight",
       "calories" : 175,
-      "type" : "ice crean",
+      "type" : "ice cream",
       "ingredients" : [
         "coconut milk",
         "vanilla extract",
-        "satled caramel",
+        "salted caramel",
         "chocolate syrup",
         "crushed peanuts"
       ],
