@@ -49,6 +49,19 @@
         "manuka honey"
       ],
     "image" : "ice-cream-xtra1.svg"
+    },
+    {
+      "name" : "What Not Icecream?",
+      "calories" : 175,
+      "type" : "ice crean",
+      "ingredients" : [
+        "coconut milk",
+        "vanilla extract",
+        "satled caramel",
+        "chocolate syrup",
+        "crushed peanuts"
+      ],
+    "image" : "ice-cream-xtra2.svg"
     }
   ]
 }
