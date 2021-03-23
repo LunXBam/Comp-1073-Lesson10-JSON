@@ -36,6 +36,19 @@
         "candy sprinkles"
       ],
     "image" : "strawberry-sprinkle.svg"
+    },
+    {
+      "name" : "Bizzare Banna Berries",
+      "calories" : 400,
+      "type" : "sorbet",
+      "ingredients" : [
+        "banana",
+        "blueberries",
+        "strawberries",
+        "raspberries",
+        "honey"
+      ],
+    "image" : "ice-cream-xtra1.svg"
     }
   ]
 }
